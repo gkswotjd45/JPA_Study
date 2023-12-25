@@ -14,6 +14,9 @@ public abstract class Item {
     private Integer price;
     private Integer stockQuanitity;
 
+    @ManyToMany(mappedBy = "items")
+    private List<Category> categories = new ArrayList<>();
+
     public Long getId() {
         return id;
     }
